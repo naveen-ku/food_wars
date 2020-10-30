@@ -14,7 +14,7 @@ class FoodCourtScreen extends StatelessWidget {
             children: [
               SearchWidget(),
               PopularFoodsWidget(),
-              // StallList(),
+              StallList(),
               // FoodStalls(),
             ],
           ),

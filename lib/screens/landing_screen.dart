@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:food_wars/screens/auth.dart';
 import 'package:food_wars/helper/dimensions.dart';
+import 'package:food_wars/screens/food_items.dart';
 
 class LandingScreen extends StatelessWidget {
   Widget _buildImage() {
@@ -52,7 +53,8 @@ class LandingScreen extends StatelessWidget {
       onPressed: () {
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (BuildContext context) {
-          return AuthScreen();
+          // return AuthScreen();
+          return FoodItemsList("buf");
         }));
       },
     );
