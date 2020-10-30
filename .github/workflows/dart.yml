@@ -25,8 +25,3 @@ jobs:
         with:
           name: android
           path: build/app/outputs/apk/release/
-      - run: flutter build ios --release --no-codesign
-      - uses: actions/upload-artifact@v1
-        with:
-          name: ios
-          path: build/ios/iphoneos/
