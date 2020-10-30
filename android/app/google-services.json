@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "213511464625",
+    "firebase_url": "https://foodwars-65e6a.firebaseio.com",
+    "project_id": "foodwars-65e6a",
+    "storage_bucket": "foodwars-65e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213511464625:android:27d91e1e0e2166cea9a490",
+        "android_client_info": {
+          "package_name": "com.example.food_wars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213511464625-iodl4i7oscdtrttu9hedkpg2m8bf0t83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.food_wars",
+            "certificate_hash": "e350911af65cce52fc5785ffb5c8d037a72c8c18"
+          }
+        },
+        {
+          "client_id": "213511464625-vuq05stogef6rufeuef4lb9abspub5r5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0HMzG3Nko0mLJ0VXS_w5gcgXgF9NSciQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213511464625-vuq05stogef6rufeuef4lb9abspub5r5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
