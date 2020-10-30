@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:food_wars/pages/landing_page.dart';
+import 'package:food_wars/pages/landing_screen.dart';
 
 class AuthPage extends StatefulWidget {
   @override
@@ -16,8 +16,15 @@ class _AuthPageState extends State<AuthPage> {
     'passValue': null,
   };
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  //final TextEditingController _passwordTextController = TextEditingController();
-  // bool _acceptTerms;
+  DecorationImage _buildBackgroundImage() {
+    return DecorationImage(
+      fit: BoxFit.cover,
+      colorFilter:
+          ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstATop),
+      image: AssetImage('assets/food_bg.jpg'),
+    );
+  }
+
   Widget _buildNameTextField() {
     return TextFormField(
       decoration: InputDecoration(
@@ -70,6 +77,34 @@ class _AuthPageState extends State<AuthPage> {
     );
   }
 
+  Widget _switchSignupModeButton() {
+    return FlatButton(
+      child: Text(
+        'Switch to Signup',
+        style: TextStyle(color: Colors.black),
+      ),
+      onPressed: () {},
+    );
+  }
+
+  Widget _signinButton() {
+    return Center(
+      child: RaisedButton(
+        color: Theme.of(context).primaryColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40.0),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+        child: Text(
+          "Sign in",
+          style:
+              TextStyle(color: Theme.of(context).accentColor, fontSize: 20.0),
+        ),
+        onPressed: () => _submitForm(),
+      ),
+    );
+  }
+
   void _submitForm() {
     if (!_formKey.currentState.validate()) {
       return;
@@ -78,7 +113,7 @@ class _AuthPageState extends State<AuthPage> {
 
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return LandingPage();
+      return LandingScreen();
     }));
   }
 
@@ -90,6 +125,9 @@ class _AuthPageState extends State<AuthPage> {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          image: _buildBackgroundImage(),
+        ),
         child: Center(
           child: Form(
             key: _formKey,
@@ -110,33 +148,10 @@ class _AuthPageState extends State<AuthPage> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    FlatButton(
-                      child: Text(
-                        'Switch to Signup',
-                        style: TextStyle(color: Theme.of(context).primaryColor),
-                      ),
-                      onPressed: () {},
-                    ),
-                    Center(
-                      child: RaisedButton(
-                        color: Theme.of(context).primaryColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0),
-                        ),
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 30.0, vertical: 10.0),
-                        child: Text(
-                          "Sign in",
-                          style: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontSize: 20.0),
-                        ),
-                        onPressed: () => _submitForm(),
-                      ),
-                    ),
+                    _switchSignupModeButton(),
+                    _signinButton(),
                     SignInButton(
                       Buttons.FacebookNew,
-                      // mini: true,
                       onPressed: () {},
                     ),
                     SizedBox(
@@ -144,7 +159,6 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                     SignInButton(
                       Buttons.Google,
-                      // mini: true,
                       onPressed: () {},
                     ),
                   ],

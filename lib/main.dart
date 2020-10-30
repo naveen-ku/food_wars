@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_wars/pages/landing_page.dart';
+import 'package:food_wars/pages/landing_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LandingPage(),
+      home: LandingScreen(),
     );
   }
 }
