@@ -112,10 +112,7 @@ class _AuthScreenState extends State<AuthScreen> {
     }
     _formKey.currentState.save();
 
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (BuildContext context) {
-      return OptionsScreen();
-    }));
+    Navigator.pushReplacementNamed(context, '/foodcourt');
   }
 
   @override
@@ -149,14 +146,18 @@ class _AuthScreenState extends State<AuthScreen> {
                     SizedBox(height: vpH * .1),
                     SignInButton(
                       Buttons.FacebookNew,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/foodcourt');
+                      },
                     ),
                     SizedBox(
                       height: 15.0,
                     ),
                     SignInButton(
                       Buttons.Google,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, '/foodcourt');
+                      },
                     ),
                   ],
                 ),

@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
-import 'package:food_wars/screens/our_picks.dart';
+import 'package:food_wars/screens/food_items.dart';
 import 'package:food_wars/widgets/bottom_nav.dart';
-import 'package:food_wars/widgets/food_stalls.dart';
 import 'package:food_wars/widgets/search_widget.dart';
 
 class FoodCourtScreen extends StatelessWidget {
@@ -13,9 +12,7 @@ class FoodCourtScreen extends StatelessWidget {
           child: Column(
             children: [
               SearchWidget(),
-              PopularFoodsWidget(),
-              StallList(),
-              // FoodStalls(),
+              // FoodItemsList("PizzaHut"),
             ],
           ),
         ),

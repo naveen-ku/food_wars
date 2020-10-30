@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_wars/screens/auth.dart';
+import 'package:food_wars/screens/foodcourt.dart';
 import 'package:food_wars/screens/landing_screen.dart';
 
 void main() {
@@ -16,7 +18,15 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LandingScreen(),
+      routes: {
+        '/': (BuildContext context) => LandingScreen(),
+        '/auth': (BuildContext context) => AuthScreen(),
+        '/foodcourt': (BuildContext context) => FoodCourtScreen(),
+      },
+      onUnknownRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) => FoodCourtScreen());
+      },
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_wars/widgets/nearby_food_stalls.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
   @override
@@ -15,6 +16,10 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
         _selectedIndex = index;
 //        navigateToScreens(index);
       });
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (BuildContext context) {
+        return NearbyFoodStalls();
+      }));
     }
 
     return BottomNavigationBar(

@@ -1,6 +1,5 @@
 import "package:flutter/material.dart";
 import 'package:food_wars/helper/dimensions.dart';
-import 'package:food_wars/models/stalls_data.dart';
 
 class FoodItemsList extends StatelessWidget {
   final String stallName;
