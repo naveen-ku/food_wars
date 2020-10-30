@@ -33,6 +33,7 @@ dependencies:
   google_sign_in:
   provider:
   qrscan: ^0.2.17
+  http: ^0.12.2
 
 dev_dependencies:
   flutter_test:
