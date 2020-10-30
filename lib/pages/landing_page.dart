@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:food_wars/pages/auth.dart';
 
 class LandingPage extends StatelessWidget {
   Widget _buildImage() {
@@ -54,7 +55,12 @@ class LandingPage extends StatelessWidget {
                 style: TextStyle(
                     color: Theme.of(context).accentColor, fontSize: 20.0),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return AuthPage();
+                }));
+              },
             )
           ],
         ),
