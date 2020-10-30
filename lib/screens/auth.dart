@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:food_wars/helper/dimensions.dart';
-import 'package:food_wars/screens/landing_screen.dart';
+import 'package:food_wars/screens/options_screen.dart';
 
 class AuthScreen extends StatefulWidget {
   @override
@@ -114,7 +114,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (BuildContext context) {
-      return LandingScreen();
+      return OptionsScreen();
     }));
   }
 
