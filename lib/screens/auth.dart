@@ -1,15 +1,15 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:food_wars/pages/landing_screen.dart';
+import 'package:food_wars/screens/landing_screen.dart';
 
-class AuthPage extends StatefulWidget {
+class AuthScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _AuthPageState();
+    return _AuthScreenState();
   }
 }
 
-class _AuthPageState extends State<AuthPage> {
+class _AuthScreenState extends State<AuthScreen> {
   Map<String, dynamic> _formData = {
     'nameValue': null,
     'emailValue': null,
@@ -21,7 +21,7 @@ class _AuthPageState extends State<AuthPage> {
       fit: BoxFit.cover,
       colorFilter:
           ColorFilter.mode(Colors.black.withOpacity(0.4), BlendMode.dstATop),
-      image: AssetImage('assets/food_bg.jpg'),
+      image: AssetImage('assets/images/food_bg.jpg'),
     );
   }
 
