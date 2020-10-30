@@ -32,9 +32,7 @@ dependencies:
   cloud_firestore:
   google_sign_in:
   provider:
-  camera:
-  path_provider:
-  path:
+  qrscan: ^0.2.17
 
 dev_dependencies:
   flutter_test:

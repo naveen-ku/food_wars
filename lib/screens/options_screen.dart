@@ -1,8 +1,27 @@
 import "package:flutter/material.dart";
+import 'package:food_wars/screens/foodcourt.dart';
+import 'package:qrscan/qrscan.dart' as scanner;
+
 import 'package:food_wars/helper/dimensions.dart';
 import 'package:food_wars/screens/auth.dart';
 
-class OptionsScreen extends StatelessWidget {
+class OptionsScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _OptionScreenState();
+  }
+}
+
+class _OptionScreenState extends State<OptionsScreen> {
+  String scanResult = '';
+  //function that launches the scanner
+  Future scanQRCode() async {
+    String cameraScanResult = await scanner.scan();
+    setState(() {
+      scanResult = cameraScanResult;
+    });
+  }
+
   Widget _buildGetStartedButton(
       var vpH, BuildContext context, String buttontext) {
     return RaisedButton(
@@ -16,9 +35,10 @@ class OptionsScreen extends StatelessWidget {
         style: TextStyle(color: Theme.of(context).accentColor, fontSize: 20.0),
       ),
       onPressed: () {
+        scanQRCode();
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (BuildContext context) {
-          return AuthScreen();
+          return FoodCourtScreen();
         }));
       },
     );
