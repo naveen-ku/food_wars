@@ -4,8 +4,9 @@ import 'package:food_wars/pages/auth.dart';
 class LandingPage extends StatelessWidget {
   Widget _buildImage() {
     return Transform.rotate(
-      angle: -50 * 3.14 / 180,
+      angle: -0 * 3.14 / 180,
       child: Container(
+          // alignment: Alignment.bottomCenter,
           margin: EdgeInsets.only(bottom: 30.0),
           child: Image.asset('assets/food.png'),
           color: Colors.transparent),
@@ -14,13 +15,13 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double deviceHight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Container(
         child: Column(
           children: [
-            SizedBox(
-              height: 20.0,
-            ),
+            SizedBox(height: deviceHight * .25),
             _buildImage(),
             SizedBox(height: 20.0),
             Container(

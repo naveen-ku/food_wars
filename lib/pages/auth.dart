@@ -124,9 +124,9 @@ class _AuthPageState extends State<AuthPage> {
                           borderRadius: BorderRadius.circular(40.0),
                         ),
                         padding: EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
+                            horizontal: 30.0, vertical: 10.0),
                         child: Text(
-                          "Signin",
+                          "Sign in",
                           style: TextStyle(
                               color: Theme.of(context).accentColor,
                               fontSize: 20.0),
