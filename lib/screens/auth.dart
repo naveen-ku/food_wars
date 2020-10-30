@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:food_wars/helper/dimensions.dart';
 import 'package:food_wars/screens/landing_screen.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -119,8 +120,8 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final double deviceWidth = MediaQuery.of(context).size.width;
-    final double targetWidth = deviceWidth > 550.0 ? 500.0 : deviceWidth * 0.95;
+    var vpW = getViewportWidth(context);
+    var vpH = getViewportHeight(context);
 
     return Scaffold(
       body: Container(
@@ -133,23 +134,19 @@ class _AuthScreenState extends State<AuthScreen> {
             key: _formKey,
             child: SingleChildScrollView(
               child: Container(
-                width: targetWidth,
+                width: vpW * .90,
                 child: Column(
                   children: <Widget>[
+                    SizedBox(height: vpH * .125),
                     _buildNameTextField(),
-                    SizedBox(
-                      height: 10.0,
-                    ),
+                    SizedBox(height: vpH * .025),
                     _buildEmailTextField(),
-                    SizedBox(
-                      height: 10.0,
-                    ),
+                    SizedBox(height: vpH * .025),
                     _buildPasswordTextField(),
-                    SizedBox(
-                      height: 10.0,
-                    ),
+                    SizedBox(height: vpH * .025),
                     _switchSignupModeButton(),
                     _signinButton(),
+                    SizedBox(height: vpH * .1),
                     SignInButton(
                       Buttons.FacebookNew,
                       onPressed: () {},

@@ -68,7 +68,7 @@ class LandingScreen extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            SizedBox(height: vpH * .25),
+            SizedBox(height: vpH * .15),
             _buildImage(),
             SizedBox(height: vpH * 0.025),
             _buildMainHeading(context),
