@@ -38,7 +38,7 @@ class _OptionScreenState extends State<OptionsScreen> {
         scanQRCode();
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (BuildContext context) {
-          return FoodCourtScreen();
+          return FoodCourt();
         }));
       },
     );

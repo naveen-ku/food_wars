@@ -5,9 +5,9 @@ class NearbyFoodStalls extends StatelessWidget {
   // final stallData = StallData.getData;
   final List<Map<String, dynamic>> stallitem = [
     {"name": "Pizza Hut", "image": "assets/images/food.png", "near": "no"},
-    {"name": "Dominos", "image": "assets/images/food.png", "near": "no"},
+    {"name": "Dominos", "image": "assets/images/food.png", "near": "yes"},
     {"name": "KFC", "image": "assets/images/food.png", "near": "no"},
-    {"name": "Pepsi", "image": "assets/images/food.png", "near": "no"},
+    {"name": "Pepsi", "image": "assets/images/food.png", "near": "yes"},
     {"name": "Bytes", "image": "assets/images/food.png", "near": "no"},
   ];
   @override
@@ -54,13 +54,15 @@ class NearbyFoodStalls extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.only(top: vpH * 0.025),
-                              child: Text(
-                                '₹ ${stallitem[index]['price'].toString()}',
-                                style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                              child: stallitem[index]['price'] == null
+                                  ? Container()
+                                  : Text(
+                                      '₹ ${stallitem[index]['price'].toString()}',
+                                      style: TextStyle(
+                                          fontSize: 20.0,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: vpH * .04),
@@ -69,12 +71,21 @@ class NearbyFoodStalls extends StatelessWidget {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(40.0),
                                 ),
-                                child: Text(
-                                  "Buy",
-                                  style: TextStyle(
-                                      color: Theme.of(context).accentColor,
-                                      fontSize: 20.0),
-                                ),
+                                child: stallitem[index]['price'] == null
+                                    ? Text(
+                                        "Look Menu",
+                                        style: TextStyle(
+                                            color:
+                                                Theme.of(context).accentColor,
+                                            fontSize: 20.0),
+                                      )
+                                    : Text(
+                                        "Buy",
+                                        style: TextStyle(
+                                            color:
+                                                Theme.of(context).accentColor,
+                                            fontSize: 20.0),
+                                      ),
                                 onPressed: () {},
                               ),
                             )

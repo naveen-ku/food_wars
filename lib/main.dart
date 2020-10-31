@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (BuildContext context) => LandingScreen(),
         '/auth': (BuildContext context) => AuthScreen(),
-        '/foodcourt': (BuildContext context) => FoodCourtScreen(),
+        '/foodcourt': (BuildContext context) => FoodCourt(),
       },
-      onUnknownRoute: (RouteSettings settings) {
-        return MaterialPageRoute(
-            builder: (BuildContext context) => FoodCourtScreen());
-      },
+      // onUnknownRoute: (RouteSettings settings) {
+      //   return MaterialPageRoute(
+      //       builder: (BuildContext context) => FoodCourt());
+      // },
     );
   }
 }
