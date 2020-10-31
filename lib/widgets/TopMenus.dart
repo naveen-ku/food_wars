@@ -14,19 +14,29 @@ class _TopMenusState extends State<TopMenus> {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           TopMenuTiles(
-              name: "Burger", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Burger",
+              imageUrl: 'assets/images/mexican-chicken-burger.jpg',
+              slug: ""),
           TopMenuTiles(
-              name: "Sushi", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Dhokla", imageUrl: 'assets/images/dhokla.jpg', slug: ""),
           TopMenuTiles(
-              name: "Pizza", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Pizza", imageUrl: 'assets/images/pizza.jpg', slug: ""),
           TopMenuTiles(
-              name: "Cake", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Cake",
+              imageUrl: 'assets/images/chocolate-cake.jpg',
+              slug: ""),
           TopMenuTiles(
-              name: "Ice Cream", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Biryani",
+              imageUrl: 'assets/images/hyderabadi-biryani.jpg',
+              slug: ""),
           TopMenuTiles(
-              name: "Soft Drink", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Gulab Jamun",
+              imageUrl: 'assets/images/gulab-jamun.jpg',
+              slug: ""),
           TopMenuTiles(
-              name: "Burger", imageUrl: 'assets/images/food.png', slug: ""),
+              name: "Spring Roll",
+              imageUrl: 'assets/images/spring-roll.jpg',
+              slug: ""),
           TopMenuTiles(
               name: "Sushi", imageUrl: 'assets/images/food.png', slug: ""),
         ],
