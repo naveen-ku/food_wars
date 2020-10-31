@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_wars/screens/food_items.dart';
+import 'package:food_wars/widgets/nearby_food_stalls.dart';
 
 class BottomNavBarWidget extends StatefulWidget {
   @override
@@ -15,6 +16,18 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
         _selectedIndex = index;
 //        navigateToScreens(index);
       });
+      if (_selectedIndex == 1) {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context) {
+          return NearbyFoodStalls();
+        }));
+      }
+      if (_selectedIndex == 3) {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context) {
+          return FoodItemsList("My Favourite items");
+        }));
+      }
     }
 
     return BottomNavigationBar(
@@ -33,8 +46,8 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
           label: 'Cart',
         ),
         BottomNavigationBarItem(
-          icon: Icon(FontAwesomeIcons.user),
-          label: 'Account',
+          icon: Icon(Icons.favorite),
+          label: 'Favourite',
         ),
       ],
       currentIndex: _selectedIndex,

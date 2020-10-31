@@ -75,28 +75,6 @@ class _OptionScreenState extends State<OptionsScreen> {
           SizedBox(height: vpH * 0.05),
 
           _buildGetStartedButton(vpH, context, "Use GPS"),
-
-          // Container(
-          //   width: vpW,
-          //   height: vpH * 0.6,
-          //   child: Container(
-          //     margin: EdgeInsets.only(bottom: 0.0),
-          //     decoration: BoxDecoration(
-          //         color: Colors.white,
-          //         shape: BoxShape.rectangle,
-          //         borderRadius: BorderRadius.only(
-          //           topRight: Radius.circular(40.0),
-          //           topLeft: Radius.circular(40.0),
-          //         ),
-          //         boxShadow: [
-          //           BoxShadow(
-          //             offset: const Offset(0.0, -3.0),
-          //             blurRadius: 5.0,
-          //             spreadRadius: 2.0,
-          //           ),
-          //         ]),
-          //   ),
-          // ),
         ],
       ),
     ));

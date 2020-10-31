@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:food_wars/screens/auth.dart';
+
 import 'package:food_wars/helper/dimensions.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -50,10 +50,7 @@ class LandingScreen extends StatelessWidget {
         style: TextStyle(color: Theme.of(context).accentColor, fontSize: 20.0),
       ),
       onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (BuildContext context) {
-          return AuthScreen();
-        }));
+        Navigator.pushReplacementNamed(context, '/auth');
       },
     );
   }
